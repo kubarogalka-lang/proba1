@@ -1,6 +1,7 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { calculate, defaultPlan, exportCsv, parsePlan } from '../src/model.ts'
+import '../model.js'
+const { calculate, defaultPlan, exportCsv, parsePlan } = globalThis.PlannerModel
 
 test('PRD example: weighted ROI, profit and gross return', () => {
   const r = calculate(defaultPlan())
